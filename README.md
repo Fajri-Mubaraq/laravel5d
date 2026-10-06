@@ -1,5 +1,9 @@
 # Aplikasi & Sistem Basis Data Laundry (Laravel 5D)
 
+Nama: M. Fajri Mubaraq
+NPM: 2410010117
+Kelas: Reg Ti 5C
+
 Repository ini berisi proyek Laravel 5D beserta dokumentasi Entity Relationship Diagram (ERD) dan skema basis data sistem transaksi Laundry.
 
 ---
@@ -69,13 +73,13 @@ erDiagram
 
 ## 📋 Keterangan Relasi & Kardinalitas
 
-| Relasi | Kardinalitas | Penjelasan / Arti |
-|--------|--------------|-------------------|
-| `pelanggan` ➔ `transaksi` | **1 : N** | Satu pelanggan bisa melakukan transaksi/pemesanan berkali-kali. |
-| `karyawan` ➔ `transaksi` | **1 : N** | Satu karyawan (kasir) melayani banyak transaksi. |
-| `transaksi` ➔ `detail_transaksi` | **1 : N** | Satu nota transaksi berisi satu atau lebih item detail layanan cucian. |
-| `layanan` ➔ `detail_transaksi` | **1 : N** | Satu jenis layanan dapat dipilih di banyak detail transaksi. |
-| `transaksi` ➔ `pembayaran` | **1 : N** | Satu transaksi bisa dibayar sekali lunas atau dicicil. |
+| Relasi                           | Kardinalitas | Penjelasan / Arti                                                      |
+| -------------------------------- | ------------ | ---------------------------------------------------------------------- |
+| `pelanggan` ➔ `transaksi`        | **1 : N**    | Satu pelanggan bisa melakukan transaksi/pemesanan berkali-kali.        |
+| `karyawan` ➔ `transaksi`         | **1 : N**    | Satu karyawan (kasir) melayani banyak transaksi.                       |
+| `transaksi` ➔ `detail_transaksi` | **1 : N**    | Satu nota transaksi berisi satu atau lebih item detail layanan cucian. |
+| `layanan` ➔ `detail_transaksi`   | **1 : N**    | Satu jenis layanan dapat dipilih di banyak detail transaksi.           |
+| `transaksi` ➔ `pembayaran`       | **1 : N**    | Satu transaksi bisa dibayar sekali lunas atau dicicil.                 |
 
 ### 🗝️ Keterangan Simbol ERD
 
@@ -91,12 +95,12 @@ erDiagram
 - **File ERD Markdown**: [`database/ERD.md`](database/ERD.md)
 - **File Script SQL Raw**: [`database/laundry_db.sql`](database/laundry_db.sql)
 - **Model Laravel**:
-  - `App\Models\Pelanggan`
-  - `App\Models\Karyawan`
-  - `App\Models\Layanan`
-  - `App\Models\Transaksi`
-  - `App\Models\DetailTransaksi`
-  - `App\Models\Pembayaran`
+    - `App\Models\Pelanggan`
+    - `App\Models\Karyawan`
+    - `App\Models\Layanan`
+    - `App\Models\Transaksi`
+    - `App\Models\DetailTransaksi`
+    - `App\Models\Pembayaran`
 - **Database Seeders**: `database/seeders/LaundrySeeder.php`
 
 ---
@@ -104,24 +108,27 @@ erDiagram
 ## 🚀 Panduan Menjalankan Proyek
 
 1. **Clone Repository**:
-   ```bash
-   git clone https://github.com/Fajri-Mubaraq/laravel5d.git
-   cd laravel5d
-   ```
+
+    ```bash
+    git clone https://github.com/Fajri-Mubaraq/laravel5d.git
+    cd laravel5d
+    ```
 
 2. **Install Dependensi & Konfigurasi Environment**:
-   ```bash
-   composer install
-   cp .env.example .env
-   php artisan key:generate
-   ```
+
+    ```bash
+    composer install
+    cp .env.example .env
+    php artisan key:generate
+    ```
 
 3. **Migrasi Database & Seeder**:
-   ```bash
-   php artisan migrate --seed
-   ```
+
+    ```bash
+    php artisan migrate --seed
+    ```
 
 4. **Jalankan Server Lokal**:
-   ```bash
-   php artisan serve
-   ```
+    ```bash
+    php artisan serve
+    ```
